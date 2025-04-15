@@ -1,0 +1,19 @@
+{% extends 'main_app/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <button class="btn btn-warning"> На страницу про нас </button>
+        {% for el in tasks %}
+          <div  class="alert alert-warning mt-2">
+            <h3> {{ el.title}}  </h3>
+            <p>  {[ el.task }}  </p>
+         </div>
+        {% endfor%}
+    </div>
+{% endblock %}
+
